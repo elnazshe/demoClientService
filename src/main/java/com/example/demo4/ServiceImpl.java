@@ -24,7 +24,7 @@ public class ServiceImpl {
     }
 
     public String search( String name) {
-        
+
         for (int i = 0; i < personList.size(); i++) {
             if (personList.get(i).getName().equals(name))
                return this.personList.get(i).toString();
