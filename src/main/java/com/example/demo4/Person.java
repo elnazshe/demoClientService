@@ -38,7 +38,8 @@ public class Person {
 
     @Override
     public String toString(){
-        return "name:" + name + "family:" + lastName + "gender:" + gender +"phone number:" +number+ "type phone:"+typePhone;
+        return "name:" + name +" "+ "family:" + lastName +" "+ "gender:" + gender +
+                " "+"phone number:" +number+" " +"type phone:"+typePhone;
     }
 
 

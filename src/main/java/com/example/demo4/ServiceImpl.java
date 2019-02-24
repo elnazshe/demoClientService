@@ -24,16 +24,13 @@ public class ServiceImpl {
     }
 
     public String search( String name) {
-        String searchResult = null;
+        
         for (int i = 0; i < personList.size(); i++) {
             if (personList.get(i).getName().equals(name))
-                searchResult = this.personList.get(i).toString();
-            else
-                searchResult = "Not Founded";
-
+               return this.personList.get(i).toString();
 
         }
-        return searchResult;
+        return "Not Founded";
     }
 
 }

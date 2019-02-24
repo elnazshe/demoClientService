@@ -2,7 +2,7 @@ package com.example.demo4;
 
 import java.util.List;
 
-public class PhoneBookInterfaceImpl implements PhoneBookInterface {
+public class PhoneBookFacadeFacadeInterfaceImpl implements PhoneBookFacadeInterface {
     ServiceImpl service =new ServiceImpl();
 
 

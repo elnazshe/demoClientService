@@ -1,7 +1,6 @@
 package com.example.demo4;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,7 @@ import java.util.List;
 public class ClientService {
     List<Person> personList = new ArrayList<>();
 
-    PhoneBookInterfaceImpl phoneBookInterface = new PhoneBookInterfaceImpl();
+    PhoneBookFacadeFacadeInterfaceImpl phoneBookFacadeInterfaceImpl = new PhoneBookFacadeFacadeInterfaceImpl();
 
     @RequestMapping("/form")
     public String form() {
@@ -63,7 +62,7 @@ public class ClientService {
 
         //  Person person=new Person(name,lastName,number,gender,typePhone);
         //  personList.add(new Person(name,lastName,number,gender,typePhone));
-        phoneBookInterface.addToPhoneBook(name, number, lastName, gender, typePhone);
+        phoneBookFacadeInterfaceImpl.addToPhoneBook(name, number, lastName, gender, typePhone);
 
         return "successfully added";
     }
@@ -75,7 +74,7 @@ public class ClientService {
 //        for (int i = 0; i < personList.size(); i++) {
 //            myList.add(personList.get(i).toString());
 //        }
-        List<String> myList = phoneBookInterface.show();
+        List<String> myList = phoneBookFacadeInterfaceImpl.show();
         return myList;
 
     }
@@ -110,7 +109,7 @@ public class ClientService {
 //
 //
 //        }
-        String searchResult = phoneBookInterface.search(name);
+        String searchResult = phoneBookFacadeInterfaceImpl.search(name);
         return searchResult;
     }
 
