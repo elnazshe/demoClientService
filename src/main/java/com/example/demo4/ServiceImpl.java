@@ -7,8 +7,10 @@ public class ServiceImpl {
 
 
     List<Person> personList =new ArrayList<>();
-    public String addToPhoneBook( String name, String number, String lastName, Gender gender , TypePhone typePhone) {
-        personList.add(new Person(name,lastName,number,gender,typePhone));
+
+    public String addToPhoneBook( String name, String number, String lastName, Gender gender , TypePhone typePhone,
+                                  String nationalCode) {
+        personList.add(new Person(name,number,lastName,gender,typePhone , nationalCode));
         return "successfully added";
     }
 

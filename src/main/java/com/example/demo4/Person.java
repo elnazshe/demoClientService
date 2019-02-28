@@ -6,6 +6,7 @@ public class Person {
     private String number;
     private Gender gender;
     private TypePhone  typePhone;
+    private String nationalCode;
 
     public Person(){
 
@@ -26,20 +27,24 @@ public class Person {
     public TypePhone getTypePhone(){return typePhone;}
     public void setTypePhone(TypePhone typePhone){this.typePhone=typePhone;}
 
-    public Person(String name,String lastName,String number,Gender gender,TypePhone typePhone)
+    public String getNationalCode(){return nationalCode;}
+    public void setNationalCode(String nationalCode){this.nationalCode=nationalCode;}
+
+    public Person(String name,String lastName,String number,Gender gender,TypePhone typePhone , String nationalCode)
     {
         this.name=name;
         this.lastName=lastName;
         this.number=number;
         this.gender=gender;
         this.typePhone=typePhone;
+        this.nationalCode=nationalCode;
 
     }
 
     @Override
     public String toString(){
         return "name:" + name +" "+ "family:" + lastName +" "+ "gender:" + gender +
-                " "+"phone number:" +number+" " +"type phone:"+typePhone;
+                " "+"phone number:" +number+" " +"type phone:"+typePhone + " "+"nationalCode: "+ nationalCode;
     }
 
 

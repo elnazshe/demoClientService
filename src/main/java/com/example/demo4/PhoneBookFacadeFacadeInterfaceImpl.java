@@ -7,8 +7,9 @@ public class PhoneBookFacadeFacadeInterfaceImpl implements PhoneBookFacadeInterf
 
 
     @Override
-    public String addToPhoneBook(String name, String number, String lastName, Gender gender, TypePhone typePhone) {
-        return service.addToPhoneBook( name, number, lastName, gender, typePhone);
+    public String addToPhoneBook(String name, String number, String lastName, Gender gender, TypePhone typePhone ,
+                                 String nationalCode) {
+        return service.addToPhoneBook( name, number, lastName, gender, typePhone , nationalCode);
     }
 
     @Override
